@@ -8,6 +8,7 @@ services:
     environment:
       ASPNETCORE_ENVIRONMENT: Development
     ports:
-      - "8080:80"
+      - 8080:80
+      - 1234:443
     volumes:
-      - ./patient.db:/app/patient.db
+      - ./PatientDb.db:/app/patient.db
