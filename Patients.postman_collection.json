@@ -1,0 +1,146 @@
+{
+	"info": {
+		"_postman_id": "380a2f98-e614-4a9c-a011-725567d91c92",
+		"name": "Patients",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "15487763"
+	},
+	"item": [
+		{
+			"name": "GET",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7126/api/Patient?birthDate=1980-01-01T00:00:00Z&birthDateFilter=eq",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7126",
+					"path": [
+						"api",
+						"Patient"
+					],
+					"query": [
+						{
+							"key": "birthDate",
+							"value": "1980-01-01T00:00:00Z"
+						},
+						{
+							"key": "birthDateFilter",
+							"value": "eq"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": {\r\n    \"use\": \"official\",\r\n    \"family\": \"Иванов\",\r\n    \"given\": \"Иван Иванович\"\r\n  },\r\n  \"gender\": \"male\",\r\n  \"birthDate\": \"1980-01-01T00:00:00Z\",\r\n  \"active\": true\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7126/api/Patient",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7126",
+					"path": [
+						"api",
+						"Patient"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"a3fbeb85-146b-46fa-a390-8a149dce84f6\",\r\n  \"gender\": \"unknown\",\r\n  \"active\": true\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7126/api/Patient/a3fbeb85-146b-46fa-a390-8a149dce84f6",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7126",
+					"path": [
+						"api",
+						"Patient",
+						"a3fbeb85-146b-46fa-a390-8a149dce84f6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7126/api/Patient?id=51b4d161-f211-433e-af0c-609fe913aa2f",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7126",
+					"path": [
+						"api",
+						"Patient"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "51b4d161-f211-433e-af0c-609fe913aa2f"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
